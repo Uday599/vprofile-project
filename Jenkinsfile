@@ -24,6 +24,26 @@ pipeline {
                 sh 'mvn -s settings.xml -DskipTests install' // telling to refer settings.
 								  // and skip unit test
             }
+            post {
+                success {
+                    echo "Now Archiving."
+                    archiveArtifacts artifacts: '**/*.war'
+                }
+            }
+
         }
+        stage('Test'){
+            steps {
+                sh 'mvn -s settings.xml test'
+            }
+
+        }
+        tage('Checkstyle Analysis'){
+            steps {
+                sh 'mvn -s settings.xml checkstyle:checkstyle'
+            }
+        }
+
+
     }
 }
