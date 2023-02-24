@@ -101,8 +101,8 @@ pipeline {
         stage('Ansible Deploy to staging'){
             steps{
                 ansiblePlaybook([
-                inventory   : 'ansible/stage.inventory'.
-                playbook    : 'ansible/site.yml'
+                inventory   : 'ansible/stage.inventory',
+                playbook    : 'ansible/site.yml',
                 installation: 'ansible',
                 colorized   : true,
                 credentialsId: 'applogin' //app server creds on jenkins
