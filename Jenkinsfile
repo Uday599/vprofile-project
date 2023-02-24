@@ -38,11 +38,19 @@ pipeline {
         stage('Ansible Deploy to PROD'){
             steps{
                 ansiblePlaybook([
+<<<<<<< HEAD
                 inventory   : 'ansible/prod.inventory',
                 playbook    : 'ansible/site.yml',
                 installation: 'ansible',
                 colorized   : true,
                 credentialsId: 'appserver-prod', //app server creds on jenkins
+=======
+                inventory   : 'ansible/stage.inventory',
+                playbook    : 'ansible/site.yml',
+                installation: 'ansible',
+                colorized   : true,
+                credentialsId: 'applogin', //app server creds(ssh with usernamw with proivate key) on jenkins
+>>>>>>> cicd-jenkans
                 disableHostKeyChecking: true,
                 extraVars   : [
                     USER: "admin",
