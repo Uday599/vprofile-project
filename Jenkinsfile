@@ -42,7 +42,7 @@ pipeline {
                 playbook    : 'ansible/site.yml',
                 installation: 'ansible',
                 colorized   : true,
-                credentialsId: 'apploginprod', //app server creds on jenkins
+                credentialsId: 'appserver-prod', //app server creds on jenkins
                 disableHostKeyChecking: true,
                 extraVars   : [
                     USER: "admin",
