@@ -105,7 +105,7 @@ pipeline {
                 playbook    : 'ansible/site.yml',
                 installation: 'ansible',
                 colorized   : true,
-                credentialsId: 'applogin', //app server creds on jenkins
+                credentialsId: 'applogin', //app server creds(ssh with usernamw with proivate key) on jenkins
                 disableHostKeyChecking: true,
                 extraVars   : [
                     USER: "admin",
