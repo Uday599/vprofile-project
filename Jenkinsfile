@@ -118,6 +118,8 @@ pipeline {
                     artifactid: "vproapp",
                     vprofile_version: "vproapp-${env.BUILD_ID}-${env.BUILD_TIMESTAMP}.war"
 
+                    // http://3.110.208.1:8081/repository/vprofile-release/QA/vproapp/19-23-02-25_0810/vproapp-19-23-02-25_0810.war
+
                 ]
 
                 ])
