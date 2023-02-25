@@ -8,7 +8,7 @@
     - name: Download latest VProfile.war from nexus
       get_url:
         url: "http://{{USER}}:{{PASS}}@{{nexusip}}:8081/repository/{{reponame}}/{{groupid}}/{{artifactid}}/{{build}}-{{time}}/{{vprofile_version}}"
-          #  http://3.110.208.1:8081/repository/vprofile-release/QA/vproapp/19-23-02-25_0810/vproapp-19-23-02-25_0810.war
+          #  http://user:password@3.110.208.1:8081/repository/vprofile-release/QA/vproapp/19-23-02-25_0810/vproapp-19-23-02-25_0810.war
         dest: "/tmp/vproapp-{{vprofile_version}}"
       register: wardeploy
       tags:
