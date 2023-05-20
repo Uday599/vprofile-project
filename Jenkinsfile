@@ -93,7 +93,7 @@ pipeline {
           }
         }
 
-         stage('Remove Unused docker image') {   // parallely deleteing images to free up space
+         stage('Remove Unused docker image') {   // parallely deleteing images in our local system to free up space
           steps{
             sh "docker rmi $registry:V$BUILD_NUMBER"
           }
