@@ -103,6 +103,8 @@ pipeline {
 	  agent { label 'k8-node' }
             steps {
                     sh "helm upgrade --install --force vproifle-stack helm/vprofilecharts --set appimage=${registry}:V${BUILD_NUMBER} --namespace prod"
+		    
+		    // helm upgrade -- install-- force name_of_stack Path/to/chart  --set appimages= Variable_need_to_pass --namespace prod
             }
         }
 
