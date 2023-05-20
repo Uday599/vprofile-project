@@ -1,3 +1,7 @@
+
+// we are passing latest artifact -> to tomcat image 
+// Not used Nexus repo anyhere here
+// OOnly tomcat- appserver is deployed on Kubernetes cluster
 pipeline {
 
     agent any
